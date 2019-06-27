@@ -53,7 +53,7 @@ class AppShell extends React.Component {
             </MenuItem>
           </Drawer>
         </div>
-        <div id="content" sytle={{margin: 'auto', marginTop: '20px'}}>
+        <div id="content" style={{margin: 'auto', marginTop: '20px'}}>
           {React.cloneElement(this.props.children)}
         </div>
       </div>
