@@ -34,6 +34,7 @@ class AppShell extends React.Component {
         </AppBar>
         <Drawer open={this.state.toggle}>
           <MenuItem onClick={this.handleDrawerToggle}>Home</MenuItem>
+            <MenuItem onClick={this.handleDrawerToggle}>Home 2</MenuItem>
         </Drawer>
       </div>
     );
