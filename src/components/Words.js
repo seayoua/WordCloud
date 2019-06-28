@@ -62,7 +62,7 @@ class Words extends React.Component {
       if(res.status != 200) {
         throw new Error(res.statusText);
       }
-      return ret.json();
+      return res.json();
     }).then(data => {
       let nextState = this.state.words;
       delete nextState[id];
