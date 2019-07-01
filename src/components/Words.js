@@ -40,6 +40,7 @@ class Words extends React.Component {
       return res.json();
     }).then(words => this.setState({words: words}))
   }
+
   _post(word) {
     return fetch(databaseURL + '/words.json', {
       method: 'POST',
@@ -55,6 +56,7 @@ class Words extends React.Component {
       this.setState({words: nextState});
     });
   }
+
   _delete(id) {
     return fetch(databaseURL + '/words/'+id+'.json', {
       method: 'DELETE'
@@ -69,12 +71,15 @@ class Words extends React.Component {
       this.setState({words: nextState});
     });
   }
+
   componentDidMount() {
     this._get();
   }
+
   handleDialogToggle = () => this.setState({
     dialog: !this.state.dialog
   })
+  
   handleValueChange = (e) => {
     let nextState = {};
     nextState[e.target.name] = e.target.value;
